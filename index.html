@@ -17,13 +17,16 @@
     </header>
 
     <nav id="navbar">
-        <ul class="pl-4">
+        <ul class="pl-12">
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="content-container">
-        <section id="placeholder">
+        <div class="divider-50"></div>
+        <section id="quote">
+            Nice to meet you! If you found your way here, you can probably help me out. Hopefully I can help
+            you too.
         </section>
         <section id="projects">
             <div class="project-title-container">
@@ -31,6 +34,8 @@
                 <h2 class="project-title inverse">Projects</h2>
                 <h2 class="project-title">Projects</h2>
             </div>
+            <div class="divider-50"></div>
+            <div class="divider-50"></div>
             <div class="divider-50"></div>
             <div class="divider-50"></div>
             <div class="project-cards-container">
@@ -41,19 +46,19 @@
                         <p>2D Platformer made in Godot w/ gdscript</p>
                     </div>
                     <div modal-id="2" class="project-card">
-                        <img src="images/url.png" alt="Project 2 Screenshot">
+                        <img src="images/url.png" alt="Project 2 Screenshot" class="project-image">
                         <h3>UCollect</h3>
                         <p>Url shortener made w/ React, ExpressJS, MongoDB</p>
                     </div>
                 </div>
                 <div class="project-cards-row-container">
                     <div modal-id="3" class="project-card">
-                        <img src="images/text.png" alt="Project 3 Screenshot">
+                        <img src="videos/UpgradedIdleOutlined.gif" alt="Project 3 Screenshot" class="project-image">
                         <h3>Project 3</h3>
                         <p>A brief description of Project 3 goes here.</p>
                     </div>
                     <div modal-id="4" class="project-card">
-                        <img src="images/mango.png" alt="Project 4 Screenshot">
+                        <img src="images/mango.png" alt="Project 4 Screenshot" class="project-image">
                         <h3>Project 4</h3>
                         <p>A brief description of Project 4 goes here.</p>
                     </div>
@@ -62,7 +67,7 @@
 
             <!-- Modal Backdrop -->
             <div id="modalBackdrop"
-                class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300 overflow-x-scroll">
+                class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300 overflow-x-hidden">
                 <div id="animatedModal" class="modal-contianer rounded-lg bg-stone-50
                     shadow-sm opacity-0 translate-y-28 scale-90 transition-all duration-300">
                     <div id="1" class="modal-content">
@@ -112,13 +117,14 @@
                             </div>
 
                         </div>
-                        <div
-                            class="flex flex-col py-4 leading-normal text-slate-600 font-light">
+                        <div class="flex flex-col py-4 leading-normal text-slate-600 font-light">
                             <div class="modal-content-body">
                                 <div class="modal-paragraph">
-                                    UCollect is my spin on a URL shortening tool with a primary focus of <span class="text-lg font-bold text-slate-400">organization</span>.
+                                    UCollect is my spin on a URL shortening tool with a primary focus of <span
+                                        class="text-lg font-bold text-slate-400">organization</span>.
                                     The unique mechanic of this tool is to allow anyone to create and maintain
-                                    <span class="text-lg font-bold text-slate-300">collections</span> of URLs. A collection is a group of shortened URLs that can be updated
+                                    <span class="text-lg font-bold text-slate-300">collections</span> of URLs. A
+                                    collection is a group of shortened URLs that can be updated
                                     by the creator and associates.
                                 </div>
                                 <img src="images/url.png" class="modal-image" alt="Project 1 Screenshot">
@@ -128,10 +134,12 @@
                                 <div class="modal-paragraph whitespace-normal">
                                     The main use case of this tool was designed to solve a problem in my life:
                                     <span class="text-lg font-semibold text-slate-800">cluttered group chats.</span>
-                                    Examples: 
-                                    <span class="text-lg font-bold text-slate-400">Agoda links from trip planning</span>, 
+                                    Examples:
+                                    <span class="text-lg font-bold text-slate-400">Agoda links from trip
+                                        planning</span>,
                                     <span class="text-lg font-bold text-slate-300">Amazon links from wishlists</span>,
-                                    <span class="text-lg font-bold text-zinc-400">IEEE links for future Citation Machine usage</span>... These massive text blocks are hard to keep track of, and
+                                    <span class="text-lg font-bold text-zinc-400">IEEE links for future Citation Machine
+                                        usage</span>... These massive text blocks are hard to keep track of, and
                                     ruin the chat for everyone. Now, a single link is all you need.
                                 </div>
                             </div>

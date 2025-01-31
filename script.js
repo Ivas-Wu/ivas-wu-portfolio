@@ -23,15 +23,19 @@ window.addEventListener('scroll', () => {
     }
 
     // Project
+    const placeholderHeight = document.querySelector('#quote').offsetHeight;
     const projectTitle = document.querySelector('.project-title-container');
     const projectTitleHeight = projectTitle.offsetHeight;
     const projectTitles = document.querySelectorAll('.project-title');
     const projectCardContainer = document.querySelector('.project-cards-container');
 
-    if (scrollY > viewportHeight * 1.5 + projectTitleHeight / 2 && scrollY < viewportHeight * 2.5 + projectTitleHeight / 2 + 20 * projectCardContainer.offsetHeight) { //updae this
+    const minScrollHeight = viewportHeight*1.5 + placeholderHeight - viewportHeight/2 + projectTitleHeight / 2;
+    const maxScrollHeight = minScrollHeight + 20 * projectCardContainer.offsetHeight;
+
+    if (scrollY > minScrollHeight && scrollY < maxScrollHeight) {
         projectTitle.style.position = 'fixed';
         projectTitle.style.top = `${viewportHeight / 2 - projectTitleHeight / 2}px`;
-        const paddingR = Math.min(40, 30 * (scrollY - viewportHeight * 1.5 - projectTitleHeight / 2) / (viewportHeight) + 10);
+        const paddingR = Math.min(40, 30 * (scrollY - minScrollHeight) / (viewportHeight) + 10);
         projectTitles.forEach(pt => {
             pt.style.paddingRight = `${paddingR}vw`;
         });

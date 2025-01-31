@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -27,7 +28,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f0f0f0;
+    background: #555;
+    background-image: url('videos/Musk1SlashOutline.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .title-text {
@@ -74,15 +79,32 @@ header {
     text-decoration: underline;
 }
 
-.content-container {}
+.content-container {
+}
 
-#placeholder {
+#quote {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 120vh;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    justify-self: center;
+    padding: 0 10vw 0 10vw;
+    @media (min-width: 600px) {
+        padding: 0 10vw 0 10vw;
+        font-size: 2rem;
+    }
+    @media (min-width: 1200px) {
+        padding: 0 15vw 0 15vw;
+        font-size: 3rem;
+    }
+    @media (min-width: 2400px) {
+        padding: 0 20vw 0 20vw;
+        font-size: 4rem;
+    }
 }
 
 
@@ -95,10 +117,10 @@ header {
 }
 
 .project-title-container {
-    font-size: clamp(2rem, 20vw, 15rem);
+    font-size: 20vw;
     font-weight: 600;
-    @media (min-width: 600px) {
-        font-size: clamp(2rem, 10vw, 15rem);
+    @media (min-width: 1200px) {
+        font-size: 10vw;
     }
 }
 
@@ -119,7 +141,7 @@ header {
 .project-cards-container {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
     margin-top: 20px;
     width: 100%;
     justify-content: center;
@@ -130,20 +152,20 @@ header {
 .project-cards-row-container {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    width: 50%;
+    gap: 2rem;
+    width: 90%;
     justify-content: center;
     align-items: center;
 
     @media (min-width: 600px) {
         flex-direction: row;
-        width: 75%;
+        width: 85%;
     }
     @media (min-width: 1200px) {
-        width: 50%;
+        width: 60%;
     }
     @media (min-width: 2400px) {
-        width: 30%;
+        width: 45%;
     }
 }
 
@@ -152,9 +174,17 @@ header {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    flex: 1;
 }
 
 .project-card:hover {
