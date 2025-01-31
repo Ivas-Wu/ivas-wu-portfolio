@@ -25,8 +25,8 @@
     <div class="content-container">
         <div class="divider-50"></div>
         <section id="quote">
-            Nice to meet you! If you found your way here, you can probably help me out. Hopefully I can help
-            you too.
+            Nice to meet you! If you found your way here, you can probably help me out. Hope you find something
+            interesting!
         </section>
         <section id="projects">
             <div class="project-title-container">
@@ -41,7 +41,7 @@
             <div class="project-cards-container">
                 <div class="project-cards-row-container">
                     <div modal-id="1" class="project-card">
-                        <img src="images/pantry.png" alt="Project 1 Screenshot" class="project-image">
+                        <img src="videos/UpgradedIdleOutlined.gif" alt="Project 1 Screenshot" class="project-image">
                         <h3>Pantry Warrior</h3>
                         <p>2D Platformer made in Godot w/ gdscript</p>
                     </div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="project-cards-row-container">
                     <div modal-id="3" class="project-card">
-                        <img src="videos/UpgradedIdleOutlined.gif" alt="Project 3 Screenshot" class="project-image">
+                        <img src="images/mango.png" alt="Project 3 Screenshot" class="project-image">
                         <h3>Project 3</h3>
                         <p>A brief description of Project 3 goes here.</p>
                     </div>
@@ -68,25 +68,38 @@
             <!-- Modal Backdrop -->
             <div id="modalBackdrop"
                 class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300 overflow-x-hidden">
-                <div id="animatedModal" class="modal-contianer rounded-lg bg-stone-50
+                <div id="animatedModal" class="modal-container rounded-lg bg-stone-50
                     shadow-sm opacity-0 translate-y-28 scale-90 transition-all duration-300">
                     <div id="1" class="modal-content">
-                        <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
-                            Pantry Warrior
+                        <div class="modal-title-container">
+                            <span class="modal-title">Pantry Warrior</span>
+                            <div>
+                                <a href="https://xecrome.itch.io/pantry-warrior-beta-test-v02" target="_blank"
+                                    rel="noopener noreferrer" class="text-slate-600 hover:text-slate-800">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <button id="closeModalButton"
+                                    class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </div>
+
                         </div>
                         <div
                             class="flex flex-col border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
                             <div class="modal-content-body">
+                                <div class="modal-subtitle">What</div>
+                                <img src="images/pantry.png" class="modal-image" alt="Project 1 Screenshot">
                                 <div class="modal-paragraph">
                                     Pantry Warrior is a 2D platformer with a focus on vertical progress. Play as a bug
                                     inflitrating the rat pantry in their journey to collect crumbs and feed their
                                     colony. Defeat enemies and level up to unlock new skills and challedge harder bosses
                                     as you climb through the levels!
                                 </div>
-                                <img src="images/pantry.png" alt="Project 1 Screenshot">
                             </div>
                             <div class="modal-content-body">
-                                <img src="images/pantry.png" alt="Project 1 Screenshot">
+                                <div class="modal-subtitle">Why</div>
+                                <img src="images/pantry.png" class="modal-image" alt="Project 1 Screenshot">
                                 <div class="modal-paragraph">
                                     This is an on going passion project. I have always been interested in gaming, and
                                     this was my way of staying productive, learning more about game design, and creating
@@ -94,17 +107,18 @@
                                 </div>
                             </div>
                             <div class="modal-content-body">
-                                <div class="relative py-4 leading-normal text-slate-600 font-light">
+                                <div class="modal-subtitle">How</div>
+                                <div class="modal-paragraph">
                                     This is developed on the godot game engine using gdscript. Art assets are drawn in
                                     Aesprite.
                                 </div>
+                                <div class="modal-paragraph"></div>
                             </div>
                         </div>
                     </div>
                     <div id="2" class="modal-content">
-                        <div class="flex items-center justify-between pb-4 text-xl font-medium text-slate-800">
+                        <div class="modal-title-container">
                             <span class="modal-title">UCollect</span>
-
                             <div>
                                 <a href="https://url-collections-front.onrender.com/" target="_blank"
                                     rel="noopener noreferrer" class="text-slate-600 hover:text-slate-800">
@@ -119,6 +133,8 @@
                         </div>
                         <div class="flex flex-col py-4 leading-normal text-slate-600 font-light">
                             <div class="modal-content-body">
+                                <div class="modal-subtitle">What</div>
+                                <img src="images/url.png" class="modal-image" alt="Project 1 Screenshot">
                                 <div class="modal-paragraph">
                                     UCollect is my spin on a URL shortening tool with a primary focus of <span
                                         class="text-lg font-bold text-slate-400">organization</span>.
@@ -127,9 +143,10 @@
                                     collection is a group of shortened URLs that can be updated
                                     by the creator and associates.
                                 </div>
-                                <img src="images/url.png" class="modal-image" alt="Project 1 Screenshot">
                             </div>
+                            <div class="horizontal-line"></div>
                             <div class="modal-content-body">
+                                <div class="modal-subtitle">Why</div>
                                 <img src="images/url2.png" class="modal-image" alt="Project 1 Screenshot">
                                 <div class="modal-paragraph whitespace-normal">
                                     The main use case of this tool was designed to solve a problem in my life:
@@ -143,28 +160,111 @@
                                     ruin the chat for everyone. Now, a single link is all you need.
                                 </div>
                             </div>
+                            <div class="horizontal-line"></div>
                             <div class="modal-content-body">
+                                <div class="modal-subtitle">How</div>
                                 <div class="modal-paragraph">
                                     One of the primary goals in this project was to learn new technologies. ExpressJS
                                     and MongoDB where used to store and manage the data and React was used for the UI.
                                 </div>
+                                <div class="modal-paragraph"></div>
                             </div>
                         </div>
                     </div>
                     <div id="3" class="modal-content">
-                        <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
-                            Custom Animation Modal 3
+                        <div class="modal-title-container">
+                            <span class="modal-title">Mango</span>
+                            <div>
+                                <a href="https://mango-gx1j.onrender.com/" target="_blank" rel="noopener noreferrer"
+                                    class="text-slate-600 hover:text-slate-800">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <button id="closeModalButton"
+                                    class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </div>
+
                         </div>
-                        <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
-                            Yap 3
+                        <div
+                            class="flex flex-col border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+                            <div class="modal-content-body">
+                                <div class="modal-subtitle">What</div>
+                                <img src="images/mango.png" class="modal-image" alt="Project 1 Screenshot">
+                                <div class="modal-paragraph">
+                                    Mango is a cross between an old math game that I played and Bingo. The board and win
+                                    conditions are the same of that of Bingo, but to get to the squares on the board,
+                                    you must created them using the numbers cards given to you. There are multiple
+                                    configurations for: board size, number of cards distributed, how cards are
+                                    distributed and win condition. Once you get comfortable, challedge your friend
+                                    online!
+                                </div>
+                            </div>
+                            <div class="modal-content-body">
+                                <div class="modal-subtitle">Why</div>
+                                <img src="images/mango2.png" class="modal-image" alt="Project 1 Screenshot">
+                                <div class="modal-paragraph">
+                                    This is a game I have had in mind for a long time. I grew up playing a game I called
+                                    24, where after revealing 4 playing cards, all players would attempt to be the first
+                                    to create the number 24 using only basic operations. The goal when approaching this
+                                    project was to learn something about responsive UI and make a game which I could
+                                    play with my family.
+                                </div>
+                            </div>
+                            <div class="modal-content-body">
+                                <div class="modal-subtitle">How</div>
+                                <div class="modal-paragraph">
+                                    The webapp is created using Angular and Typescript. Server is hosted using
+                                    ExpressJS.
+                                </div>
+                                <div class="modal-paragraph"></div>
+                            </div>
                         </div>
                     </div>
                     <div id="4" class="modal-content">
-                        <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
-                            Custom Animation Modal 4
+                        <div class="modal-title-container">
+                            <span class="modal-title">Essay Tools</span>
+                            <div>
+                                <a href="https://sentence-frequency-parser-webapp.onrender.com/" target="_blank"
+                                    rel="noopener noreferrer" class="text-slate-600 hover:text-slate-800">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <button id="closeModalButton"
+                                    class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </div>
+
                         </div>
-                        <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
-                            Yap 4
+                        <div
+                            class="flex flex-col border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+                            <div class="modal-content-body">
+                                <div class="modal-subtitle">What</div>
+                                <img src="images/mango.png" class="modal-image" alt="Project 1 Screenshot">
+                                <div class="modal-paragraph">
+                                    A suite of tools to help students! Currently includes a word frequency parser and a
+                                    word counter for quotes. In the frequency parser, you configure words to ignore,
+                                    sentence enders, word enders and the number of sentences to check at once. Upon
+                                    submitting your esssay, the tool will highlight all duplicate words used within the
+                                    configured sentence count. The word counter is a tool to get a word count, ignoring
+                                    quotes.
+                                </div>
+                            </div>
+                            <div class="modal-content-body">
+                                <div class="modal-subtitle">Why</div>
+                                <img src="images/mango.png" class="modal-image" alt="Project 1 Screenshot">
+                                <div class="modal-paragraph">
+                                    I have a kid sister who couldn't find these tools online. Seemed pretty fun and easy
+                                    to throw together a script for them and it helps her out too.
+                                </div>
+                            </div>
+                            <div class="modal-content-body">
+                                <div class="modal-subtitle">How</div>
+                                <div class="modal-paragraph">
+                                    React + Typescript for UI. Uvicorn + FastAPI for backend server and API framework.
+                                </div>
+                                <div class="modal-paragraph"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
