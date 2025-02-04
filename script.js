@@ -23,14 +23,15 @@ window.addEventListener('scroll', () => {
     }
 
     // Project
-    const placeholderHeight = document.querySelector('#quote').offsetHeight;
+    const quoteHeight = document.querySelector('#quote').offsetHeight;
+    const projectHeight = document.querySelector('#projects').offsetHeight;
     const projectTitle = document.querySelector('.project-title-container');
     const projectTitleHeight = projectTitle.offsetHeight;
     const projectTitles = document.querySelectorAll('.project-title');
     const projectCardContainer = document.querySelector('.project-cards-container');
 
-    const minScrollHeight = viewportHeight*1.5 + placeholderHeight - viewportHeight/2 + projectTitleHeight / 2;
-    const maxScrollHeight = minScrollHeight + 20 * projectCardContainer.offsetHeight;
+    const minScrollHeight = viewportHeight*1.5 + quoteHeight - viewportHeight/2 + projectTitleHeight / 2;
+    const maxScrollHeight = minScrollHeight + projectHeight;
 
     if (scrollY > minScrollHeight && scrollY < maxScrollHeight) {
         projectTitle.style.position = 'fixed';
@@ -40,6 +41,10 @@ window.addEventListener('scroll', () => {
             pt.style.paddingRight = `${paddingR}vw`;
         });
     }
+    else if (scrollY >= maxScrollHeight) {
+        projectTitle.style.position = 'absolute';
+        projectTitle.style.top = `${maxScrollHeight}px`;
+    } 
     else {
         projectTitle.style.position = 'relative';
         projectTitle.style.top = ``;
@@ -47,13 +52,6 @@ window.addEventListener('scroll', () => {
             pt.style.paddingRight = 'clamp(0px, 10vw, 20vw)';
         });
     }
-
-
-    // if (scrollPosition > sectionTop + sectionHeight) {
-    //     aboutText.classList.add('reveal-text');
-    // } else {
-    //     aboutText.classList.remove('reveal-text');
-    // }
 });
 
 
@@ -92,4 +90,17 @@ modalBackdrop.addEventListener('click', (e) => {
         animatedModal.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
         animatedModal.classList.add('opacity-0', 'translate-y-28', 'scale-90');
     }
+});
+
+document.getElementById("email-icon").addEventListener("click", function() {
+    const email = "ivas.wu@yahoo.ca"; 
+    navigator.clipboard.writeText(email).then(() => {
+        alert("Email copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy email: ", err);
+    });
+});
+
+document.getElementById("menu-button").addEventListener("click", function() {
+    document.getElementById("mobile-menu").classList.toggle("active");
 });

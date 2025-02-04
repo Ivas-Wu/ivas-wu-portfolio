@@ -79,6 +79,42 @@ header {
     text-decoration: underline;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding-left: 12px;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #444;
+    padding-left: 10px;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    #navbar ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
 .content-container {
 }
 
@@ -99,14 +135,13 @@ header {
     }
     @media (min-width: 1200px) {
         padding: 0 15vw 0 15vw;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     @media (min-width: 2400px) {
         padding: 0 20vw 0 20vw;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
-
 
 #projects {
     display: flex;
@@ -308,4 +343,35 @@ header {
     @media (min-width: 600px) {
         margin: 0.5rem 0.5rem 0.5rem 1rem;
     }
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.contact-title {
+    color: white;
+    padding-bottom: 1rem;
+    font-size: large;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-icons img {
+    width: 40px; 
+    height: 40px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1);
 }

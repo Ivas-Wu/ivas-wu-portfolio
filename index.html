@@ -17,10 +17,15 @@
     </header>
 
     <nav id="navbar">
+        <button class="menu-toggle" id="menu-button">☰</button>
         <ul class="pl-12">
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="mobile-nav" id="mobile-menu">
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
     <div class="content-container">
         <div class="divider-50"></div>
@@ -54,13 +59,13 @@
                 <div class="project-cards-row-container">
                     <div modal-id="3" class="project-card">
                         <img src="images/mango.png" alt="Project 3 Screenshot" class="project-image">
-                        <h3>Project 3</h3>
-                        <p>A brief description of Project 3 goes here.</p>
+                        <h3>Mango</h3>
+                        <p>Math X Bingo web game.</p>
                     </div>
                     <div modal-id="4" class="project-card">
                         <img src="images/text.png" alt="Project 4 Screenshot" class="project-image">
-                        <h3>Project 4</h3>
-                        <p>A brief description of Project 4 goes here.</p>
+                        <h3>Essay Tools</h3>
+                        <p>Tools for checking your writing.</p>
                     </div>
                 </div>
             </div>
@@ -271,13 +276,24 @@
             </div>
 
         </section>
-
+        <div class="divider-50"></div>
+        <div class="divider-50"></div>
+        <div class="divider-50"></div>
         <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Content here...</p>
+            <div class="contact-title">
+                Connect with me!
+            </div>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/ivas-wu" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ivas-wu" target="_blank">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+                <i class="fa-solid fa-envelope fa-2x" id="email-icon" style="cursor: pointer;"></i>
+            </div>
         </section>
-        <div class="divider-50"></div>
-        <div class="divider-50"></div>
+        <div class="divider-30"></div>
     </div>
     <script src="script.js"></script>
 </body>
