@@ -5,6 +5,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary-color: #B9CDDA;
+    --secondary-color: #2C497F;
+    --text-color: #3D2B56;
+    --highlight-color: #F9E784;
+    --light-color: #E8E9F3;
+    --cover-color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] {
+    --primary-color: #2C3E50;
+    --secondary-color: #1A252F;
+    --text-color: #E8E9F3;
+    --highlight-color: #F4D03F;
+    --light-color: #93a3b3;
+    --cover-color: rgba(0, 0, 0, 0.5);
+}
+
 .divider-30 {
     height: 30vh;
     width: 100%;
@@ -20,7 +38,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #000;
+    background-color: var(--primary-color);
 }
 
 header {
@@ -28,18 +46,39 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #555;
-    background-image: url('videos/Musk1SlashOutline.gif');
+    background: #2a2829;
+    /* background-image: url('videos/Musk1SlashOutline.gif'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cover-color);
+    z-index: 0;
+}
+
 .title-text {
     font-size: 4rem;
+    font-weight: 600;
     transition: transform 0.1s ease;
     margin: 0;
-    color: white;
+    color: var(--text-color);
     z-index: 998;
 }
 
@@ -48,8 +87,8 @@ header {
     top: 0;
     opacity: 0;
     width: 100%;
-    background: #000;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     transition: opacity 0.5s ease;
     z-index: 997;
@@ -57,6 +96,15 @@ header {
     justify-content: start;
     align-items: center;
     flex-direction: row;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    @media (min-width: 768px) {
+        padding-left: 5rem;
+    }
 }
 
 #navbar ul {
@@ -70,7 +118,7 @@ header {
 }
 
 #navbar ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
 }
@@ -79,21 +127,38 @@ header {
     text-decoration: underline;
 }
 
+.nav-right {
+    margin-left: auto;
+    padding-right: 3rem;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    color: var(--highlight-color);
+}
+
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 24px;
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
-    padding-left: 12px;
 }
 
 .mobile-nav {
     display: none;
     flex-direction: column;
     gap: 10px;
-    background-color: #444;
+    background-color: var(--primary-color);
     padding-left: 10px;
     position: absolute;
     top: 75px;
@@ -125,7 +190,7 @@ header {
     min-height: 120vh;
     text-align: center;
     font-size: 1.5rem;
-    color: white;
+    color: var(--text-color);
     font-family: 'Poppins', sans-serif;
     justify-self: center;
     padding: 0 10vw 0 10vw;
@@ -162,7 +227,7 @@ header {
 .project-title {
     margin: 0;
     padding-right: clamp(0px, 10vw, 20vw);
-    color: #555;
+    color: var(--secondary-color);
     transition: padding-right 0.2s ease;
     z-index: -1;
     /* max-width: 100vw; */
@@ -170,7 +235,12 @@ header {
 
 .inverse {
     transform: scaleX(-1);
-    color: #999;
+    color: var(--highlight-color);;
+}
+
+.disclaimer {
+    color: var(--text-color);
+    font-size: small;
 }
 
 .project-cards-container {
@@ -205,7 +275,7 @@ header {
 }
 
 .project-card {
-    background: #EEE;
+    background: var(--light-color);
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -225,7 +295,7 @@ header {
 .project-card:hover {
     transform: translateY(-5px);
     cursor: pointer;
-    background: #FFEFD3;
+    background: var(--highlight-color);
 }
 
 .project-card img {
@@ -242,7 +312,7 @@ header {
 
 .project-card p {
     font-size: 1rem;
-    color: #666;
+    color: var(--text-color);
 }
 
 .modal-container {
@@ -251,7 +321,7 @@ header {
     max-width: 1200px;
     margin: 4%;
     padding: 0.5rem;
-    background-color: #EEE;
+    background-color: var(--light-color);
     @media (min-width: 600px) {
         width: 95vw;
     }
@@ -269,14 +339,14 @@ header {
     justify-content: space-between;
     padding-bottom: 1rem; 
     border-bottom: solid;
-    border-color: #ddd;
+    border-color: var(--text-color);
     border-radius: 1px;
 }
 
 .modal-title {
     font-size: xx-large;
     font-weight: 900;
-    color: #666;
+    color: var(--text-color);
     padding: 1rem 2rem 0 1rem;
     @media (min-width: 600px) {
         padding: 1rem 2rem 0 2rem;
@@ -301,7 +371,7 @@ header {
     border-top: solid;
     height: 0;
     margin: 1rem 0 1rem 0;
-    color:#ddd;
+    color:var(--text-color);
     @media (min-width: 1200px) {
         margin: 0.3rem 0 0.3rem 0;
     }
@@ -351,11 +421,11 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--text-color);
 }
 
 .contact-title {
-    color: white;
+    color: var(--text-color);
     padding-bottom: 1rem;
     font-size: large;
 }
