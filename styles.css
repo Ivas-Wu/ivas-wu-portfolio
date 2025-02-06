@@ -12,6 +12,10 @@
     --highlight-color: #F9E784;
     --light-color: #E8E9F3;
     --cover-color: rgba(255, 255, 255, 0.5);
+    --text-hl-1: #A5BE00;
+    --text-hl-2: #BFCC94;
+    --text-hl-3: #FFAD69;
+    --text-hl-4: #368F8B;
 }
 
 [data-theme="dark"] {
@@ -21,6 +25,10 @@
     --highlight-color: #F4D03F;
     --light-color: #93a3b3;
     --cover-color: rgba(0, 0, 0, 0.5);
+    --text-hl-1: #F9E784;
+    --text-hl-2: #3A5743;
+    --text-hl-3: #3581B8;
+    --text-hl-4: #7D387D;
 }
 
 .divider-30 {
@@ -159,9 +167,10 @@ header {
     flex-direction: column;
     gap: 10px;
     background-color: var(--primary-color);
-    padding-left: 10px;
+    padding: 10px;
+    padding-bottom: 1rem;
     position: absolute;
-    top: 75px;
+    top: 5rem;
     left: 0;
     width: 100%;
 }
@@ -308,6 +317,7 @@ header {
 .project-card h3 {
     margin: 10px 0;
     font-size: 1.5rem;
+    color: var(--text-color);
 }
 
 .project-card p {
@@ -382,6 +392,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     padding: 0 1rem 0 1rem;
+    color: var(--text-color);
     @media (min-width: 1200px) {
         flex-direction: row;
         padding: 1rem 2rem 1.5rem 2rem;
@@ -400,6 +411,27 @@ header {
         margin: 0.5rem 1rem 1rem 1rem;
         font-size: large;
     }
+}
+
+.modal-paragraph-hl {
+    font-size: large;
+    font-weight: 600;
+}
+
+.hl1 {
+    color:var(--text-hl-1);
+}
+
+.hl2 {
+    color:var(--text-hl-2);
+}
+
+.hl3 {
+    color:var(--text-hl-3);
+}
+
+.hl4 {
+    color:var(--text-hl-4);
 }
 
 .modal-image {
